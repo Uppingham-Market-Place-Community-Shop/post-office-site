@@ -5,8 +5,8 @@ import App from "./App.tsx";
 import "./index.css";
 
 datadogRum.init({
-    applicationId: '41135a78-5027-47e3-bf96-a8a67e973c87',
-    clientToken: 'pub727d472cbbaea3f62c5ebe466a031e5c',
+    applicationId: 'c9b2c93f-52aa-48d1-9f40-99d8f73b4017',
+    clientToken: 'pub7a9c4ae5abad2581cdf36055bfb5ff8e',
     site: 'datadoghq.com',
     service: 'Uppingham-Market-Place-Community-Shop',
     env: 'prod',
