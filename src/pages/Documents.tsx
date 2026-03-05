@@ -36,6 +36,32 @@ function getFolderIcon(name: string): React.ElementType {
   return FOLDER_ICONS.default;
 }
 
+function getFileUrls(file: DriveFile): { view: string; download: string } {
+  const { id, mimeType } = file;
+  switch (mimeType) {
+    case "application/vnd.google-apps.document":
+      return {
+        view: `https://docs.google.com/document/d/${id}/view`,
+        download: `https://docs.google.com/document/d/${id}/export?format=pdf`,
+      };
+    case "application/vnd.google-apps.spreadsheet":
+      return {
+        view: `https://docs.google.com/spreadsheets/d/${id}/view`,
+        download: `https://docs.google.com/spreadsheets/d/${id}/export?format=xlsx`,
+      };
+    case "application/vnd.google-apps.presentation":
+      return {
+        view: `https://docs.google.com/presentation/d/${id}/view`,
+        download: `https://docs.google.com/presentation/d/${id}/export/pdf`,
+      };
+    default:
+      return {
+        view: `https://drive.google.com/file/d/${id}/view`,
+        download: `https://drive.google.com/uc?export=download&id=${id}`,
+      };
+  }
+}
+
 function formatDate(iso: string) {
   if (!iso) return "";
   return new Date(iso).toLocaleDateString("en-GB", { year: "numeric", month: "long" });
@@ -86,44 +112,47 @@ const DocumentSection = ({ folder }: { folder: DriveFolder }) => {
         <span className="text-sm text-muted-foreground">({folder.files.length})</span>
       </div>
       <div className="grid gap-4">
-        {folder.files.map((file) => (
-          <div
-            key={file.id}
-            className="flex items-center justify-between bg-card border border-border rounded-lg p-5 hover:shadow-md hover:border-primary/30 transition-all group"
-          >
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
-                {file.name}
-              </h3>
-              {file.description && (
-                <p className="text-sm text-muted-foreground mt-1">{file.description}</p>
-              )}
-              <span className="text-xs text-muted-foreground mt-1 block">
-                {formatDate(file.modifiedTime || file.createdTime)}
-              </span>
+        {folder.files.map((file) => {
+          const { view, download } = getFileUrls(file);
+          return (
+            <div
+              key={file.id}
+              className="flex items-center justify-between bg-card border border-border rounded-lg p-5 hover:shadow-md hover:border-primary/30 transition-all group"
+            >
+              <div className="flex-1 min-w-0">
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
+                  {file.name.replace(/-/g, " ")}
+                </h3>
+                {file.description && (
+                  <p className="text-sm text-muted-foreground mt-1">{file.description}</p>
+                )}
+                <span className="text-xs text-muted-foreground mt-1 block">
+                  {formatDate(file.modifiedTime || file.createdTime)}
+                </span>
+              </div>
+              <div className="ml-4 flex items-center gap-2">
+                <a
+                  href={view}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
+                  title="View"
+                >
+                  <ExternalLink size={18} />
+                </a>
+                <a
+                  href={download}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
+                  title="Download as PDF"
+                >
+                  <Download size={18} />
+                </a>
+              </div>
             </div>
-            <div className="ml-4 flex items-center gap-2">
-              <a
-                href={`https://drive.google.com/file/d/${file.id}/view`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
-                title="View"
-              >
-                <ExternalLink size={18} />
-              </a>
-              <a
-                href={`https://drive.google.com/uc?export=download&id=${file.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
-                title="Download"
-              >
-                <Download size={18} />
-              </a>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
