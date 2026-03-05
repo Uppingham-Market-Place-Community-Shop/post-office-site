@@ -36,6 +36,32 @@ function getFolderIcon(name: string): React.ElementType {
   return FOLDER_ICONS.default;
 }
 
+function getFileUrls(file: DriveFile): { view: string; download: string } {
+  const { id, mimeType } = file;
+  switch (mimeType) {
+    case "application/vnd.google-apps.document":
+      return {
+        view: `https://docs.google.com/document/d/${id}/view`,
+        download: `https://docs.google.com/document/d/${id}/export?format=pdf`,
+      };
+    case "application/vnd.google-apps.spreadsheet":
+      return {
+        view: `https://docs.google.com/spreadsheets/d/${id}/view`,
+        download: `https://docs.google.com/spreadsheets/d/${id}/export?format=xlsx`,
+      };
+    case "application/vnd.google-apps.presentation":
+      return {
+        view: `https://docs.google.com/presentation/d/${id}/view`,
+        download: `https://docs.google.com/presentation/d/${id}/export/pdf`,
+      };
+    default:
+      return {
+        view: `https://drive.google.com/file/d/${id}/view`,
+        download: `https://drive.google.com/uc?export=download&id=${id}`,
+      };
+  }
+}
+
 function formatDate(iso: string) {
   if (!iso) return "";
   return new Date(iso).toLocaleDateString("en-GB", { year: "numeric", month: "long" });
