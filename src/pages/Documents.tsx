@@ -74,7 +74,7 @@ async function fetchJSON(url: string) {
 }
 
 async function fetchSubfolders(): Promise<DriveFolder[]> {
-  const url = `https://www.googleapis.com/drive/v3/files?q=%271kJne4CQeKItY4GX6eylJR9oYkyTFwHFV%27+in+parents+and+mimeType%3D%27application%2Fvnd.google-apps.folder%27+and+trashed%3Dfalse&fields=files(id%2Cname)&orderBy=name&key=${GOOGLE_API_KEY}`;
+  const url = `https://www.googleapis.com/drive/v3/files?q=%27${ROOT_FOLDER_ID}%27+in+parents+and+mimeType%3D%27application%2Fvnd.google-apps.folder%27+and+trashed%3Dfalse&fields=files(id%2Cname)&orderBy=name&key=${GOOGLE_API_KEY}`;
   const data = await fetchJSON(url);
   return (data.files || []).map((f: { id: string; name: string }) => ({ id: f.id, name: f.name, files: [] }));
 }
