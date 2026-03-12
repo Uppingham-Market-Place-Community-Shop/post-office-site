@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FileText, Newspaper, Megaphone, Download, ExternalLink, Loader2, FolderOpen } from "lucide-react";
 import Layout from "@/components/Layout";
 
-const GOOGLE_API_KEY = "AIzaSyBqJMngx-LOkDxTU4rb1n5eiVp09ooH-ic";
+const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_DRIVE_API_KEY || "";
 const ROOT_FOLDER_ID = "1CqveOL3XOrzAwWuUUtmKOHcVnburI9Ow";
 
 type DriveFile = {
