@@ -91,7 +91,7 @@ const Contact = () => {
               </p>
               <p>
                 <strong className="text-foreground">Email</strong><br />
-                info@uppinghamcommunityshop.co.uk
+                geoffthompsonutc@gmail.com
               </p>
               <p>
                 <strong className="text-foreground">Volunteer</strong><br />
