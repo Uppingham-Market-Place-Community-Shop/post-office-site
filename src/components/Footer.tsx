@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => (
-  <footer className="bg-primary text-primary-foreground mt-auto">
+const Footer = () =>
+<footer className="bg-primary text-primary-foreground mt-auto">
     <div className="container mx-auto px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-display text-lg font-bold mb-3">Uppingham Marketplace</h3>
-          <p className="text-sm opacity-80">
-            Community Shop Limited — serving the Uppingham community with pride.
-          </p>
+          <h3 className="font-display text-lg font-bold mb-3">Uppingham Marketplace Community Shop Ltd</h3>
+          <p className="text-sm opacity-80">Serving the Uppingham community with pride.
+
+        </p>
         </div>
         <div>
           <h4 className="font-display font-bold mb-3">Quick Links</h4>
@@ -34,7 +34,7 @@ const Footer = () => (
         © {new Date().getFullYear()} Uppingham Marketplace Community Shop Limited. All rights reserved.
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
