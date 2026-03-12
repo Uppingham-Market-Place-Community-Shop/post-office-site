@@ -9,7 +9,7 @@ import {
 const faqs = [
   { q: "What is the Uppingham Marketplace Community Shop?", a: "We are a Community Benefit Society, established to save the Uppingham Post Office from closure.  If the project is successful then the members will own the Post Office and the Management Committee will be responsible for running the Post Office business for the foreseeable future." },
   { q: "How can I volunteer?", a: "We're always looking for enthusiastic volunteers! Please visit our Contact page to get in touch, and we'll let you know about current opportunities and how you can get involved." },
-  { q: "What are your opening hours?", a: "Our opening hours vary seasonally. Please check our latest newsletter or contact us directly for current opening times." },
+  { q: "FAQ3", a: "Our opening hours vary seasonally. Please check our latest newsletter or contact us directly for current opening times." },
   { q: "How is the shop funded?", a: "The shop is funded through a combination of community fundraising, donations, and revenue from sales. We are a not-for-profit organisation and all proceeds go back into running and improving the shop." },
   { q: "Can I donate products to the shop?", a: "Yes! We welcome donations of suitable products. Please contact us to discuss what items we can accept and arrange a drop-off." },
   { q: "Where can I find your newsletters and press releases?", a: "All our documents including newsletters, press releases, and newspaper articles are available on our Documents page for free download." },
