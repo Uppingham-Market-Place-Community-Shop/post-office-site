@@ -42,8 +42,8 @@ const Contact = () => {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full border border-input bg-card rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="Your name"
-              />
+                placeholder="Your name" />
+              
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
@@ -54,8 +54,8 @@ const Contact = () => {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full border border-input bg-card rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="your@email.com"
-              />
+                placeholder="your@email.com" />
+              
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-1.5">Message</label>
@@ -66,14 +66,14 @@ const Contact = () => {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="w-full border border-input bg-card rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                placeholder="How can we help?"
-              />
+                placeholder="How can we help?" />
+              
             </div>
             <button
               type="submit"
               disabled={submitting}
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-60"
-            >
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-60">
+              
               <Send size={16} />
               {submitting ? "Sending..." : "Send Message"}
             </button>
@@ -89,7 +89,8 @@ const Contact = () => {
                 <strong className="text-foreground">Visit Us</strong><br />
                 Uppingham Marketplace, Uppingham, Rutland
               </p>
-              <p>
+              <p>Email
+geoffthompsonutc@gmail.com
                 <strong className="text-foreground">Email</strong><br />
                 info@uppinghamcommunityshop.co.uk
               </p>
@@ -101,8 +102,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>);
 };
 
 export default Contact;
