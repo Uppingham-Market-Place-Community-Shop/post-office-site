@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "What is the Uppingham Marketplace Community Shop?", a: "We are a community-run shop located in the heart of Uppingham's marketplace. Our shop is operated by volunteers and exists to serve the local community with everyday essentials and locally sourced products." },
+  { q: "What is the Uppingham Marketplace Community Shop?", a: "We are a Community Benefit Society, established to save the Uppingham Post Office from closure.  If the project is successful then the members will own the Post Office and the Management Committee will be responsible for running the Post Office business for the foreseeable future." },
   { q: "How can I volunteer?", a: "We're always looking for enthusiastic volunteers! Please visit our Contact page to get in touch, and we'll let you know about current opportunities and how you can get involved." },
   { q: "What are your opening hours?", a: "Our opening hours vary seasonally. Please check our latest newsletter or contact us directly for current opening times." },
   { q: "How is the shop funded?", a: "The shop is funded through a combination of community fundraising, donations, and revenue from sales. We are a not-for-profit organisation and all proceeds go back into running and improving the shop." },
