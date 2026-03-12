@@ -89,8 +89,7 @@ const Contact = () => {
                 <strong className="text-foreground">Visit Us</strong><br />
                 Uppingham Marketplace, Uppingham, Rutland
               </p>
-              <p>Email
-geoffthompsonutc@gmail.com
+              <p>
                 <strong className="text-foreground">Email</strong><br />
                 info@uppinghamcommunityshop.co.uk
               </p>
