@@ -13,7 +13,7 @@ const faqs = [
   { q: "How is the Post Office funded?", a: "The Post Office is funded through a combination of community fundraising, donations, and revenue from sales. We are a not-for-profit organisation and all proceeds go back into running and improving the Post Office." },
   { q: "FAQ5", a: "FAQ5 response" },
   { q: "Where can I find your newsletters and press releases?", a: "All our documents including newsletters, press releases, and newspaper articles are available on our Documents page for free download." },
-  { q: "How can I stay updated on shop news?", a: "Follow our newsletters available on the Documents page, and feel free to visit us in-store for the latest community updates." },
+  { q: "FAQ7", a: "FAQ7 response" },
 ];
 
 const FAQ = () => {
