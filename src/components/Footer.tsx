@@ -5,8 +5,9 @@ const Footer = () =>
     <div className="container mx-auto px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-display font-bold mb-3 text-xs">Uppingham Marketplace Community Shop Ltd
+          <h3 className="font-display font-bold mb-3 text-xs">Uppingham Marketplace Community Shop Ltd. 
 A Community Benefit Society registered on 12 November 2025 with the Financial Conduct Authority under the Cooperative and Community Benefits Societies Act 2014. Registration number 9628.
+        
         </h3>
           <p className="text-sm opacity-80">Serving the Uppingham community with pride.
 
@@ -36,5 +37,4 @@ A Community Benefit Society registered on 12 November 2025 with the Financial Co
         © {new Date().getFullYear()} Uppingham Marketplace Community Shop Limited. All rights reserved.
       </div>
     </div>
-  </footer>;
-export default Footer;
+  </footer>;export default Footer;
