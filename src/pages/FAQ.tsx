@@ -11,7 +11,7 @@ const faqs = [
   { q: "How can I volunteer?", a: "We're always looking for enthusiastic volunteers! Please visit our Contact page to get in touch, and we'll let you know about current opportunities and how you can get involved." },
   { q: "FAQ3", a: "FAQ3 response" },
   { q: "How is the Post Office funded?", a: "The Post Office is funded through a combination of community fundraising, donations, and revenue from sales. We are a not-for-profit organisation and all proceeds go back into running and improving the Post Office." },
-  { q: "Can I donate products to the shop?", a: "Yes! We welcome donations of suitable products. Please contact us to discuss what items we can accept and arrange a drop-off." },
+  { q: "FAQ5", a: "FAQ5 response" },
   { q: "Where can I find your newsletters and press releases?", a: "All our documents including newsletters, press releases, and newspaper articles are available on our Documents page for free download." },
   { q: "How can I stay updated on shop news?", a: "Follow our newsletters available on the Documents page, and feel free to visit us in-store for the latest community updates." },
 ];
