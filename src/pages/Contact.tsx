@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-display font-bold mb-2">Contact Us</h1>
+        <h1 className="text-3xl md:text-4xl font-display font-bold mb-2">Contact Us  (NOT CURRENTLY WORKING)</h1>
         <p className="text-muted-foreground mb-10 max-w-2xl">
           We'd love to hear from you. Whether you have a question, suggestion, or want to volunteer — drop us a message.
         </p>
